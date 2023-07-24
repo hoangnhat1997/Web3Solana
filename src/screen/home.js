@@ -6,12 +6,14 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React, { useContext } from "react";
+
+import * as ExpoLinking from "expo-linking";
+
 import { TwitterContext } from "../context/context";
 
 const Home = () => {
-  const { state } = useContext(TwitterContext);
-  console.log(state);
-
+  const { deepLink } = useContext(TwitterContext);
+  console.log(deepLink);
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button}>
